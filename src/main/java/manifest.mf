@@ -1,0 +1,1 @@
+Main-Class: uj.wmii.pwj.gvt.Gvt

@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+def junitVersion = '5.9.0'
+def assertjVersion = "3.23.1"
+def gsonVersion = '2.10'
+
+group 'uj.wmii.pwj.gvt'
+version '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_17
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
+    testImplementation "org.assertj:assertj-core:$assertjVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+}
+
+test {
+    useJUnitPlatform()
+}

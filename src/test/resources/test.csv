@@ -1,0 +1,8 @@
+name,hasRuntimeCommand,runtimeCommand,expectedExitCode,expectedExitMessage,commands,hasComment,comment
+"Invoke empty command",false,,1,"Please specify command.",,false,
+"Add file to not initialized repo",false,,-2,"Current directory is not initialized. Please use init command to initialize.","add a.txt",false,
+"Initialize repo",false,,0,"Repository initialized successfully.","init",false,
+"Add not existing file to initialized repo",false,,21,"File not found. File: a.txt","add a.txt",false,
+"Check version 0",false,,0,"Version: 0\nGVT initialized.","version",false,
+"Add file to repo",true,"touch a.txt",0,"File added successfully. File: a.txt","add a.txt",false,
+"Check version 1",false,,0,"Version: 1\nAdded file: a.txt","version",false,
